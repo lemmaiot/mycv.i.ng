@@ -26,16 +26,6 @@ MyCV.i.ng is a simple, fast, and affordable platform that transforms traditional
 
 ---
 
-## 🔧 Tech Stack
-
-- HTML/CSS/JavaScript
-- Hosting: [e.g. Vercel, Netlify, or cPanel Shared Hosting]
-- CMS/Backend: [optional if using auto-generating script or templates]
-- Payment Integration: Paystack or Flutterwave
-- Submission: Google Forms or WhatsApp API
-
----
-
 ## 🚀 Getting Started (For Devs)
 
 If you're a developer looking to contribute or deploy your own version of MyCV.i.ng:
