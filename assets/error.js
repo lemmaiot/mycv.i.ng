@@ -1,12 +1,7 @@
-// Example: Validate link availability via fetch
-const testURL = "https://mycv.i.ng"; // or dynamically from input/query
+// Get the current path (removes starting/ending slashes)
+const path = window.location.pathname.replace(/^\/+|\/+$/g, '');
 
-fetch(testURL, { method: 'HEAD', mode: 'no-cors' })
-  .then(response => {
-    // In 'no-cors' mode, you can't access status directly, assume success
-    console.log("Link seems okay.");
-  })
-  .catch(error => {
-    // Redirect to error page on fetch failure
-    window.location.href = "error.html";
-  });
+// If the path is not empty and is not "index.html", redirect to error page
+if (path && path !== 'index.html') {
+  window.location.href = '/error.html';
+}
