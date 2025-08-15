@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Business Card - Pro Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #4A90E2 0%, #2D2D2D 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        .contact-item {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .contact-item:hover {
+            background-color: rgba(102, 126, 234, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .qr-code {
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjcwIiB5PSIwIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjAiIHk9IjcwIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEwIiB5PSIxMCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSI4MCIgeT0iMTAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgZmlsbD0id2hpdGUiLz4KPHJlY3QgeD0iMTAiIHk9IjgwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjQwIiB5PSI0MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K') no-repeat center;
+            background-size: contain;
+        }
+        
+        @keyframes fillBar {
+            from { width: 0%; }
+            to { width: var(--target-width); }
+        }
+        
+        .skill-bar {
+            animation: fillBar 1.5s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen gradient-bg p-4">
+    <!-- Main Card Container -->
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <div class="flex items-center justify-center mb-4">
+                <div class="bg-white rounded-2xl px-6 py-3 shadow-lg">
+                    <h1 class="text-2xl font-bold" style="color: #4A90E2;">MyCv.i.ng</h1>
+                    <p class="text-xs text-gray-600">Professional CV Platform</p>
+                </div>
+            </div>
+            <h2 class="text-3xl font-bold text-white mb-2">Professional Digital CV</h2>
+            <p class="text-white/80">Hosted at: mycv.i.ng/adebayo • Professional • Interactive • Modern</p>
+        </div>
+        
+        <!-- Business Card -->
+        <div class="bg-white rounded-3xl card-shadow hover-lift p-8 mb-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Profile Section -->
+                <div class="md:col-span-1 text-center">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-32 h-32 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full flex items-center justify-center text-white text-4xl font-bold mx-auto">
+                            AO
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white pulse-animation"></div>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Adebayo Okafor</h2>
+                    <p class="text-lg font-medium mb-4" style="color: #4A90E2;">Senior Business Development Manager</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Driving business growth and strategic partnerships across West Africa. 8+ years experience in corporate development and client relationship management.
+                    </p>
+                    
+                    <!-- QR Code -->
+                    <div class="mt-6">
+                        <div class="w-20 h-20 qr-code mx-auto mb-2"></div>
+                        <p class="text-xs text-gray-500">Scan to save contact</p>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="md:col-span-1 space-y-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-address-book mr-2" style="color: #4A90E2;"></i>
+                        Contact Info
+                    </h3>
+                    
+                    <div class="contact-item p-3 rounded-lg" onclick="makeCall('+234-803-123-4567')">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-green-500 w-5"></i>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-500">Phone</p>
+                                <p class="font-medium text-gray-800">+234 803 123 4567</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item p-3 rounded-lg" onclick="openWhatsApp('+2347083682007')">
+                        <div class="flex items-center">
+                            <i class="fab fa-whatsapp text-green-600 w-5"></i>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-500">WhatsApp</p>
+                                <p class="font-medium text-gray-800">+234 708 368 2007</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item p-3 rounded-lg" onclick="sendEmail('info@mycv.i.ng')">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 w-5"></i>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-500">Email</p>
+                                <p class="font-medium text-gray-800">adebayo.okafor@company.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item p-3 rounded-lg" onclick="openWebsite('https://mycv.i.ng/me-pro')">
+                        <div class="flex items-center">
+                            <i class="fas fa-globe text-purple-500 w-5"></i>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-500">Professional CV</p>
+                                <p class="font-medium text-gray-800">mycv.i.ng/me-pro</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item p-3 rounded-lg">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-red-500 w-5"></i>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-500">Location</p>
+                                <p class="font-medium text-gray-800">Ilorin, Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Media & Actions -->
+                <div class="md:col-span-1">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-share-alt mr-2" style="color: #4A90E2;"></i>
+                        Connect & Actions
+                    </h3>
+                    
+                    <!-- Social Media Links -->
+                    <div class="grid grid-cols-2 gap-3 mb-6">
+                        <a href="https://linkedin.com/in/adebayookafor" target="_blank" class="social-icon bg-blue-600 text-white p-3 rounded-lg text-center hover:bg-blue-700">
+                            <i class="fab fa-linkedin-in text-xl mb-1"></i>
+                            <p class="text-xs">LinkedIn</p>
+                        </a>
+                        
+                        <a href="https://twitter.com/adebayookafor" target="_blank" class="social-icon bg-sky-500 text-white p-3 rounded-lg text-center hover:bg-sky-600">
+                            <i class="fab fa-twitter text-xl mb-1"></i>
+                            <p class="text-xs">Twitter</p>
+                        </a>
+                        
+                        <a href="https://linkedin.com/company/lemmaiot" target="_blank" class="social-icon bg-pink-500 text-white p-3 rounded-lg text-center hover:bg-pink-600">
+                            <i class="fab fa-instagram text-xl mb-1"></i>
+                            <p class="text-xs">Instagram</p>
+                        </a>
+                        
+                        <a href="https://facebook.com/Lemmaiot-109697137507070" target="_blank" class="social-icon bg-blue-800 text-white p-3 rounded-lg text-center hover:bg-blue-900">
+                            <i class="fab fa-facebook text-xl mb-1"></i>
+                            <p class="text-xs">Facebook</p>
+                        </a>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="space-y-3">
+                        <button onclick="downloadCV()" class="w-full text-white py-3 px-4 rounded-lg font-medium transition-all flex items-center justify-center" style="background: #4A90E2;" onmouseover="this.style.background='#3A7BC8'" onmouseout="this.style.background='#4A90E2'">
+                            <i class="fas fa-download mr-2"></i>
+                            Download Portfolio
+                        </button>
+                        
+                        <button onclick="saveContact()" class="w-full text-white py-3 px-4 rounded-lg font-medium transition-all flex items-center justify-center" style="background: #FF968D;" onmouseover="this.style.background='#FF7F73'" onmouseout="this.style.background='#FF968D'">
+                            <i class="fas fa-user-plus mr-2"></i>
+                            Save Contact
+                        </button>
+                        
+                        <button onclick="makePayment()" class="w-full text-white py-3 px-4 rounded-lg font-medium transition-all flex items-center justify-center" style="background: #00C851;" onmouseover="this.style.background='#00A63F'" onmouseout="this.style.background='#00C851'">
+                            <i class="fas fa-credit-card mr-2"></i>
+                            Pay with Card/Transfer
+                        </button>
+                        
+                        <button onclick="shareCard()" class="w-full bg-gray-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-gray-700 transition-all flex items-center justify-center">
+                            <i class="fas fa-share mr-2"></i>
+                            Share Card
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Professional Information Tabs -->
+        <div class="bg-white rounded-3xl card-shadow hover-lift p-8 mb-8">
+            <!-- Tab Navigation -->
+            <div class="flex flex-wrap border-b border-gray-200 mb-6">
+                <button onclick="switchTab('skills')" id="skills-tab" class="tab-button px-4 py-3 font-medium text-sm border-b-2 transition-all" style="color: #4A90E2; border-color: #4A90E2;">
+                    <i class="fas fa-star mr-2"></i>Skills
+                </button>
+                <button onclick="switchTab('experience')" id="experience-tab" class="tab-button px-4 py-3 font-medium text-sm text-gray-500 border-b-2 border-transparent hover:text-gray-700 transition-all">
+                    <i class="fas fa-briefcase mr-2"></i>Experience
+                </button>
+                <button onclick="switchTab('education')" id="education-tab" class="tab-button px-4 py-3 font-medium text-sm text-gray-500 border-b-2 border-transparent hover:text-gray-700 transition-all">
+                    <i class="fas fa-graduation-cap mr-2"></i>Education
+                </button>
+                <button onclick="switchTab('gallery')" id="gallery-tab" class="tab-button px-4 py-3 font-medium text-sm text-gray-500 border-b-2 border-transparent hover:text-gray-700 transition-all">
+                    <i class="fas fa-images mr-2"></i>Portfolio
+                </button>
+            </div>
+            
+            <!-- Skills Tab Content -->
+            <div id="skills-content" class="tab-content">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">Business Development</span>
+                                <span class="text-sm text-gray-500">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full" style="width: 95%; background: #4A90E2; --target-width: 95%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">Strategic Planning</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full" style="width: 90%; background: #FF968D; --target-width: 90%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">Client Relations</span>
+                                <span class="text-sm text-gray-500">92%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full" style="width: 92%; background: #4A90E2; --target-width: 92%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">Financial Analysis</span>
+                                <span class="text-sm text-gray-500">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar h-2 rounded-full" style="width: 88%; background: #FF968D; --target-width: 88%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">Core Competencies</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #4A90E2;">Salesforce CRM</span>
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #FF968D;">Market Analysis</span>
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #4A90E2;">Negotiation</span>
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #FF968D;">Project Management</span>
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #4A90E2;">Team Leadership</span>
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #FF968D;">Financial Planning</span>
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #4A90E2;">Partnership Development</span>
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #FF968D;">Risk Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Experience Tab Content -->
+            <div id="experience-content" class="tab-content hidden">
+                <div class="space-y-6">
+                    <div class="border-l-4 pl-6" style="border-color: #4A90E2;">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold text-gray-800">Senior Business Development Manager</h4>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">2020 - Present</span>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-2">Sterling Bank Plc</p>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-3">Leading strategic partnerships across West Africa, managing a portfolio worth ₦2.5B, and driving 35% revenue growth through innovative business solutions and client relationship management.</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Managed key client accounts worth over ₦2.5B</li>
+                            <li>• Achieved 135% of annual revenue targets</li>
+                            <li>• Led cross-functional teams of 15+ professionals</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border-l-4 pl-6" style="border-color: #FF968D;">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold text-gray-800">Business Development Associate</h4>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">2018 - 2020</span>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-2">Access Bank Plc</p>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-3">Developed new market opportunities, managed key client accounts, and collaborated with cross-functional teams to deliver comprehensive financial solutions to corporate clients.</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Generated ₦800M in new business revenue</li>
+                            <li>• Maintained 98% client retention rate</li>
+                            <li>• Developed 25+ strategic partnerships</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border-l-4 pl-6" style="border-color: #4A90E2;">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold text-gray-800">Relationship Manager</h4>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">2016 - 2018</span>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-2">First Bank Nigeria</p>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-3">Managed high-net-worth client portfolios, provided financial advisory services, and achieved 120% of annual targets through strategic client engagement and service excellence.</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Managed portfolio of 50+ high-value clients</li>
+                            <li>• Exceeded targets by 120% consistently</li>
+                            <li>• Implemented new client onboarding processes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education Tab Content -->
+            <div id="education-content" class="tab-content hidden">
+                <div class="space-y-6">
+                    <div class="border-l-4 pl-6" style="border-color: #4A90E2;">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold text-gray-800">MBA - Business Administration</h4>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">2014 - 2016</span>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-2">Lagos Business School</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Specialized in Strategic Management and Corporate Finance. Graduated with Distinction, focusing on emerging market business strategies and financial analysis.</p>
+                    </div>
+                    
+                    <div class="border-l-4 pl-6" style="border-color: #FF968D;">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold text-gray-800">B.Sc Economics</h4>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">2010 - 2014</span>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-2">University of Lagos</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">First Class Honours in Economics with focus on Development Economics and Financial Markets. Active in student leadership and debate society.</p>
+                    </div>
+                    
+                    <div class="border-l-4 pl-6" style="border-color: #4A90E2;">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold text-gray-800">Professional Certification</h4>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">2019</span>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-2">Chartered Institute of Bankers Nigeria</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Associate Member (ACIB) - Comprehensive certification in banking operations, risk management, and financial services regulation.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Tab Content -->
+            <div id="gallery-content" class="tab-content hidden">
+                <div class="mb-6">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-4">Professional Portfolio & Achievements</h4>
+                    <p class="text-gray-600 text-sm mb-6">Showcasing key projects, certifications, and professional milestones</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Project 1 -->
+                    <div class="bg-gray-50 rounded-xl p-4 hover:shadow-lg transition-all cursor-pointer" onclick="openGalleryModal('project1')">
+                        <div class="w-full h-32 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg mb-4 flex items-center justify-center">
+                            <i class="fas fa-chart-line text-white text-3xl"></i>
+                        </div>
+                        <h5 class="font-semibold text-gray-800 mb-2">Market Expansion Project</h5>
+                        <p class="text-sm text-gray-600">Led strategic expansion into 3 new markets, achieving 40% revenue growth</p>
+                        <div class="mt-3">
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Strategy</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full ml-1">Growth</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="bg-gray-50 rounded-xl p-4 hover:shadow-lg transition-all cursor-pointer" onclick="openGalleryModal('project2')">
+                        <div class="w-full h-32 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg mb-4 flex items-center justify-center">
+                            <i class="fas fa-handshake text-white text-3xl"></i>
+                        </div>
+                        <h5 class="font-semibold text-gray-800 mb-2">Partnership Development</h5>
+                        <p class="text-sm text-gray-600">Secured 15+ strategic partnerships worth ₦1.2B in total value</p>
+                        <div class="mt-3">
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full">Partnerships</span>
+                            <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full ml-1">Negotiation</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="bg-gray-50 rounded-xl p-4 hover:shadow-lg transition-all cursor-pointer" onclick="openGalleryModal('project3')">
+                        <div class="w-full h-32 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg mb-4 flex items-center justify-center">
+                            <i class="fas fa-users text-white text-3xl"></i>
+                        </div>
+                        <h5 class="font-semibold text-gray-800 mb-2">Team Leadership</h5>
+                        <p class="text-sm text-gray-600">Built and managed high-performing team of 12 professionals</p>
+                        <div class="mt-3">
+                            <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full">Leadership</span>
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full ml-1">Management</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Certificate 1 -->
+                    <div class="bg-gray-50 rounded-xl p-4 hover:shadow-lg transition-all cursor-pointer" onclick="openGalleryModal('cert1')">
+                        <div class="w-full h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg mb-4 flex items-center justify-center">
+                            <i class="fas fa-certificate text-white text-3xl"></i>
+                        </div>
+                        <h5 class="font-semibold text-gray-800 mb-2">ACIB Certification</h5>
+                        <p class="text-sm text-gray-600">Associate Member, Chartered Institute of Bankers Nigeria</p>
+                        <div class="mt-3">
+                            <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">Banking</span>
+                            <span class="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded-full ml-1">Certified</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Award -->
+                    <div class="bg-gray-50 rounded-xl p-4 hover:shadow-lg transition-all cursor-pointer" onclick="openGalleryModal('award1')">
+                        <div class="w-full h-32 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg mb-4 flex items-center justify-center">
+                            <i class="fas fa-trophy text-white text-3xl"></i>
+                        </div>
+                        <h5 class="font-semibold text-gray-800 mb-2">Excellence Award 2023</h5>
+                        <p class="text-sm text-gray-600">Outstanding Performance in Business Development - Sterling Bank</p>
+                        <div class="mt-3">
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full">Award</span>
+                            <span class="text-xs bg-pink-100 text-pink-800 px-2 py-1 rounded-full ml-1">Excellence</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Speaking Engagement -->
+                    <div class="bg-gray-50 rounded-xl p-4 hover:shadow-lg transition-all cursor-pointer" onclick="openGalleryModal('speaking1')">
+                        <div class="w-full h-32 bg-gradient-to-br from-teal-400 to-blue-500 rounded-lg mb-4 flex items-center justify-center">
+                            <i class="fas fa-microphone text-white text-3xl"></i>
+                        </div>
+                        <h5 class="font-semibold text-gray-800 mb-2">Industry Speaker</h5>
+                        <p class="text-sm text-gray-600">Keynote on "Digital Banking Transformation" at FinTech Lagos 2023</p>
+                        <div class="mt-3">
+                            <span class="text-xs bg-teal-100 text-teal-800 px-2 py-1 rounded-full">Speaking</span>
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full ml-1">FinTech</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-sm text-gray-600 mb-4">💡 <strong>Pro Tip:</strong> Click on any item to view detailed information</p>
+                    <button onclick="requestCustomGallery()" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-all">
+                        <i class="fas fa-plus mr-2"></i>Request Custom Gallery Setup
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Options Section -->
+        <div class="bg-white rounded-3xl card-shadow hover-lift p-8 mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-credit-card mr-3" style="color: #4A90E2;"></i>
+                Payment Options
+            </h3>
+            
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
+                <div class="p-4 border-2 border-green-200 rounded-xl text-center hover:border-green-400 transition-all cursor-pointer" onclick="showPaymentModal('bank')">
+                    <i class="fas fa-university text-2xl text-green-600 mb-2"></i>
+                    <h4 class="font-semibold text-gray-800">Bank Transfer</h4>
+                    <p class="text-sm text-gray-600">GTBank, Access, UBA, etc.</p>
+                </div>
+                
+                <div class="p-4 border-2 border-blue-200 rounded-xl text-center hover:border-blue-400 transition-all cursor-pointer" onclick="showPaymentModal('card')">
+                    <i class="fas fa-credit-card text-2xl text-blue-600 mb-2"></i>
+                    <h4 class="font-semibold text-gray-800">Debit/Credit Card</h4>
+                    <p class="text-sm text-gray-600">Visa, Mastercard, Verve</p>
+                </div>
+                
+                <div class="p-4 border-2 border-purple-200 rounded-xl text-center hover:border-purple-400 transition-all cursor-pointer" onclick="showPaymentModal('mobile')">
+                    <i class="fas fa-mobile-alt text-2xl text-purple-600 mb-2"></i>
+                    <h4 class="font-semibold text-gray-800">Mobile Money</h4>
+                    <p class="text-sm text-gray-600">Opay, PalmPay, Kuda</p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <p class="text-sm text-gray-600 mb-4">💰 <strong>MyCv.i.ng Service:</strong> ₦25,000 for Professional Digital CV</p>
+                <p class="text-xs text-gray-500">Includes: Custom design, Professional hosting at mycv.i.ng/yourname, QR code, mobile optimization, and lifetime updates</p>
+                <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                    <p class="text-sm font-medium text-blue-800">🎯 Perfect for: Executives, Managers, Consultants, and Business Professionals</p>
+                    <p class="text-xs text-blue-600 mt-1">Stand out in job applications and networking events with a professional digital presence</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions Footer -->
+        <div class="bg-white rounded-3xl card-shadow hover-lift p-6 text-center">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Ready to Connect?</h3>
+            <div class="flex flex-wrap justify-center gap-3">
+                <button onclick="sendEmail('adebayo.okafor@company.com')" class="px-6 py-2 rounded-full text-white font-medium transition-all hover:scale-105" style="background: #4A90E2;">
+                    <i class="fas fa-envelope mr-2"></i>Send Message
+                </button>
+                <button onclick="openWhatsApp('+2348031234567')" class="px-6 py-2 rounded-full text-white font-medium transition-all hover:scale-105" style="background: #25D366;">
+                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp Me
+                </button>
+                <button onclick="makeCall('+234-803-123-4567')" class="px-6 py-2 rounded-full text-white font-medium transition-all hover:scale-105" style="background: #FF968D;">
+                    <i class="fas fa-phone mr-2"></i>Call Now
+                </button>
+                <button onclick="openWebsite('https://mycv.i.ng/adebayo')" class="px-6 py-2 rounded-full bg-gray-600 text-white font-medium hover:bg-gray-700 transition-all hover:scale-105">
+                    <i class="fas fa-globe mr-2"></i>View Full CV
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function makeCall(phoneNumber) {
+            window.location.href = `tel:${phoneNumber}`;
+        }
+        
+        function sendEmail(email) {
+            window.location.href = `mailto:${email}?subject=Hello from your Digital Business Card`;
+        }
+        
+        function openWebsite(url) {
+            window.open(url, '_blank');
+        }
+        
+        function openWhatsApp(phoneNumber) {
+            const message = encodeURIComponent("Hello! I'm interested in connecting with you. I found your digital business card very impressive!");
+            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+        }
+        
+        function makePayment() {
+            showPaymentModal('general');
+        }
+        
+        function showPaymentModal(type) {
+            let title = 'Payment Information';
+            let content = '';
+            
+            switch(type) {
+                case 'bank':
+                    title = 'Bank Transfer Details';
+                    content = `
+                        <div class="text-left">
+                            <h4 class="font-semibold mb-3">Transfer to:</h4>
+                            <p><strong>Bank:</strong> GTBank</p>
+                            <p><strong>Account Name:</strong> Adebayo Okafor</p>
+                            <p><strong>Account Number:</strong> 0123456789</p>
+                            <p><strong>Amount:</strong> ₦25,000</p>
+                            <div class="mt-4 p-3 bg-yellow-50 rounded-lg">
+                                <p class="text-sm text-yellow-800">💡 <strong>Note:</strong> Send payment screenshot to WhatsApp after transfer</p>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                case 'card':
+                    title = 'Card Payment';
+                    content = `
+                        <div class="text-center">
+                            <p class="mb-4">Secure card payment powered by Paystack</p>
+                            <button onclick="initiateCardPayment()" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700">
+                                Pay ₦25,000 with Card
+                            </button>
+                        </div>
+                    `;
+                    break;
+                case 'mobile':
+                    title = 'Mobile Money';
+                    content = `
+                        <div class="text-left">
+                            <h4 class="font-semibold mb-3">Send to:</h4>
+                            <p><strong>Opay:</strong> 0803-123-4567</p>
+                            <p><strong>PalmPay:</strong> 0803-123-4567</p>
+                            <p><strong>Kuda:</strong> 0803-123-4567</p>
+                            <p><strong>Amount:</strong> ₦25,000</p>
+                            <div class="mt-4 p-3 bg-green-50 rounded-lg">
+                                <p class="text-sm text-green-800">📱 Send payment confirmation to WhatsApp</p>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                default:
+                    content = `
+                        <div class="text-center">
+                            <p class="mb-4">Choose your preferred payment method:</p>
+                            <div class="space-y-2">
+                                <button onclick="showPaymentModal('bank')" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">Bank Transfer</button>
+                                <button onclick="showPaymentModal('card')" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Card Payment</button>
+                                <button onclick="showPaymentModal('mobile')" class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">Mobile Money</button>
+                            </div>
+                        </div>
+                    `;
+            }
+            
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
+            modal.innerHTML = `
+                <div class="bg-white rounded-2xl p-6 max-w-md w-full">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-gray-800">${title}</h3>
+                        <button onclick="this.closest('.fixed').remove()" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    ${content}
+                    <div class="mt-6 text-center">
+                        <button onclick="openWhatsApp('+2348031234567')" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">
+                            <i class="fab fa-whatsapp mr-2"></i>Contact on WhatsApp
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+        }
+        
+        function initiateCardPayment() {
+            showNotification('Card payment feature coming soon! Please use bank transfer or contact via WhatsApp.', 'info');
+        }
+        
+        function downloadCV() {
+            const cvContent = `ADEBAYO OKAFOR - SENIOR BUSINESS DEVELOPMENT MANAGER
+
+CONTACT INFORMATION
+Phone: +234 803 123 4567
+Email: adebayo.okafor@company.com
+Website: mycv.i.ng/adebayo
+Location: Lagos, Nigeria
+
+PROFESSIONAL SUMMARY
+Senior Business Development Manager with 8+ years of experience driving business growth and strategic partnerships across West Africa. Expertise in corporate development and client relationship management.
+
+SKILLS
+• Business Development (95%)
+• Strategic Planning (90%)
+• Client Relations (92%)
+• Financial Analysis (88%)
+• Salesforce CRM, Market Analysis
+• Negotiation, Project Management
+• Team Leadership, Partnership Development
+
+EXPERIENCE
+Senior Business Development Manager | Sterling Bank Plc | 2020 - Present
+• Managed key client accounts worth over ₦2.5B
+• Achieved 135% of annual revenue targets
+• Led cross-functional teams of 15+ professionals
+
+Business Development Associate | Access Bank Plc | 2018 - 2020
+• Generated ₦800M in new business revenue
+• Maintained 98% client retention rate
+• Developed 25+ strategic partnerships
+
+Relationship Manager | First Bank Nigeria | 2016 - 2018
+• Managed portfolio of 50+ high-value clients
+• Exceeded targets by 120% consistently
+• Implemented new client onboarding processes
+
+EDUCATION
+MBA - Business Administration | Lagos Business School | 2014 - 2016
+B.Sc Economics | University of Lagos | 2010 - 2014
+Professional Certification | Chartered Institute of Bankers Nigeria | 2019`;
+            
+            const blob = new Blob([cvContent], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Adebayo_Okafor_CV.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            
+            showNotification('CV downloaded successfully!', 'success');
+        }
+        
+        function saveContact() {
+            const vCard = `BEGIN:VCARD
+VERSION:3.0
+FN:Adebayo Okafor
+ORG:Sterling Bank Plc
+TITLE:Senior Business Development Manager
+TEL:+2348031234567
+EMAIL:adebayo.okafor@company.com
+URL:https://mycv.i.ng/adebayo
+ADR:;;Lagos;;Nigeria
+END:VCARD`;
+            
+            const blob = new Blob([vCard], { type: 'text/vcard' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Adebayo_Okafor_Contact.vcf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            
+            showNotification('Contact saved successfully!', 'success');
+        }
+        
+        function shareCard() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Adebayo Okafor - Digital Business Card',
+                    text: 'Check out my digital business card!',
+                    url: window.location.href
+                });
+            } else {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    showNotification('Card URL copied to clipboard!', 'success');
+                });
+            }
+        }
+        
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 right-4 px-6 py-3 rounded-lg text-white font-medium z-50 ${
+                type === 'success' ? 'bg-green-500' : type === 'info' ? 'bg-blue-500' : 'bg-red-500'
+            }`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transform = 'translateY(-20px)';
+                notification.style.transition = 'all 0.3s ease';
+                
+                setTimeout(() => {
+                    if (document.body.contains(notification)) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+        
+        function openGalleryModal(itemId) {
+            const galleryItems = {
+                'project1': {
+                    title: 'Market Expansion Project',
+                    description: 'Led strategic expansion into 3 new markets across West Africa, achieving 40% revenue growth within 18 months.',
+                    details: [
+                        '• Conducted comprehensive market research and analysis',
+                        '• Developed go-to-market strategies for each region',
+                        '• Built local partnerships and distribution networks',
+                        '• Achieved ₦800M in new revenue streams',
+                        '• Managed cross-functional team of 15 professionals'
+                    ],
+                    icon: 'fas fa-chart-line',
+                    color: 'from-blue-400 to-purple-500'
+                },
+                'project2': {
+                    title: 'Partnership Development',
+                    description: 'Secured 15+ strategic partnerships worth ₦1.2B in total value, expanding business reach and capabilities.',
+                    details: [
+                        '• Identified and evaluated potential strategic partners',
+                        '• Negotiated complex partnership agreements',
+                        '• Established joint venture frameworks',
+                        '• Created partnership performance metrics',
+                        '• Maintained ongoing relationship management'
+                    ],
+                    icon: 'fas fa-handshake',
+                    color: 'from-green-400 to-blue-500'
+                },
+                'project3': {
+                    title: 'Team Leadership Excellence',
+                    description: 'Built and managed high-performing team of 12 professionals, achieving 95% employee satisfaction.',
+                    details: [
+                        '• Recruited and onboarded top talent',
+                        '• Implemented performance management systems',
+                        '• Conducted regular training and development programs',
+                        '• Achieved 25% improvement in team productivity',
+                        '• Maintained 98% employee retention rate'
+                    ],
+                    icon: 'fas fa-users',
+                    color: 'from-orange-400 to-red-500'
+                },
+                'cert1': {
+                    title: 'ACIB Professional Certification',
+                    description: 'Associate Member of the Chartered Institute of Bankers Nigeria - comprehensive banking expertise.',
+                    details: [
+                        '• Completed rigorous banking operations curriculum',
+                        '• Specialized in risk management and compliance',
+                        '• Certified in financial services regulation',
+                        '• Ongoing professional development requirements',
+                        '• Member of professional banking community'
+                    ],
+                    icon: 'fas fa-certificate',
+                    color: 'from-yellow-400 to-orange-500'
+                },
+                'award1': {
+                    title: 'Excellence Award 2023',
+                    description: 'Outstanding Performance in Business Development - Sterling Bank recognition for exceptional results.',
+                    details: [
+                        '• Exceeded annual targets by 150%',
+                        '• Generated ₦2.1B in new business revenue',
+                        '• Maintained 98% client satisfaction rating',
+                        '• Led innovative business development initiatives',
+                        '• Recognized among top 5% of performers company-wide'
+                    ],
+                    icon: 'fas fa-trophy',
+                    color: 'from-purple-400 to-pink-500'
+                },
+                'speaking1': {
+                    title: 'Industry Speaking Engagement',
+                    description: 'Keynote speaker on "Digital Banking Transformation" at FinTech Lagos 2023 conference.',
+                    details: [
+                        '• Presented to 500+ industry professionals',
+                        '• Shared insights on digital transformation strategies',
+                        '• Discussed emerging fintech trends in Africa',
+                        '• Participated in expert panel discussions',
+                        '• Featured in industry publications'
+                    ],
+                    icon: 'fas fa-microphone',
+                    color: 'from-teal-400 to-blue-500'
+                }
+            };
+            
+            const item = galleryItems[itemId];
+            if (!item) return;
+            
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
+            modal.innerHTML = `
+                <div class="bg-white rounded-2xl p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center">
+                            <div class="w-16 h-16 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center mr-4">
+                                <i class="${item.icon} text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">${item.title}</h3>
+                                <p class="text-gray-600">${item.description}</p>
+                            </div>
+                        </div>
+                        <button onclick="this.closest('.fixed').remove()" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-800 mb-3">Key Highlights:</h4>
+                        <div class="space-y-2">
+                            ${item.details.map(detail => `<p class="text-gray-700 text-sm">${detail}</p>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center space-x-3">
+                        <button onclick="openWhatsApp('+2348031234567')" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">
+                            <i class="fab fa-whatsapp mr-2"></i>Discuss This Project
+                        </button>
+                        <button onclick="sendEmail('adebayo.okafor@company.com')" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                            <i class="fas fa-envelope mr-2"></i>Request Details
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+        }
+        
+        function requestCustomGallery() {
+            const message = encodeURIComponent("Hi! I'm interested in adding a custom portfolio gallery to my MyCv.i.ng profile. Can you help me set this up with my own projects and achievements?");
+            window.open(`https://wa.me/+2348031234567?text=${message}`, '_blank');
+        }
+        
+        function switchTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.add('hidden'));
+            
+            // Remove active styles from all tabs
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.style.color = '#6B7280';
+                button.style.borderColor = 'transparent';
+            });
+            
+            // Show selected tab content
+            const targetContent = document.getElementById(tabName + '-content');
+            if (targetContent) {
+                targetContent.classList.remove('hidden');
+            }
+            
+            // Add active styles to selected tab
+            const activeTab = document.getElementById(tabName + '-tab');
+            if (activeTab) {
+                activeTab.style.color = '#4A90E2';
+                activeTab.style.borderColor = '#4A90E2';
+            }
+        }
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set default tab
+            switchTab('skills');
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96f6e948f5100db4',t:'MTc1NTI0MjIzNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
