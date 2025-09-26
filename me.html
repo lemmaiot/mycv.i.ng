@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image:src" content="assets/images/index-meta.jpg">
+  <meta property="og:image" content="assets/images/index-meta.jpg">
+  <meta name="twitter:title" content="Create a Personal CV Website in 24hrs">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/primary-logo-png.png-128x128.png" type="image/x-icon">
+  <meta name="description" content="Get your CV hosted as a sleek, professional website at just ₦2,500. Submit CV + Payment, and go live within 24hrs!">
+  
+    <title>Digital Business Card - Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #4A90E2 0%, #FF968D 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        .contact-item {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .contact-item:hover {
+            background-color: rgba(102, 126, 234, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .print-card {
+            display: none;
+        }
+        
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            .print-card, .print-card * {
+                visibility: visible;
+            }
+            .print-card {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 3.5in;
+                height: 2in;
+                display: block !important;
+                background: white;
+                padding: 0.2in;
+                box-sizing: border-box;
+            }
+        }
+        
+        .qr-code {
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjcwIiB5PSIwIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjAiIHk9IjcwIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEwIiB5PSIxMCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSI4MCIgeT0iMTAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgZmlsbD0id2hpdGUiLz4KPHJlY3QgeD0iMTAiIHk9IjgwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjQwIiB5PSI0MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K') no-repeat center;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body class="min-h-screen gradient-bg p-4">
+    <!-- Main Card Container -->
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <div class="flex items-center justify-center mb-4">
+                <div class="bg-white rounded-2xl px-6 py-3 shadow-lg">
+                    <h1 class="text-2xl font-bold" style="color: #4A90E2;">MyCv.i.ng</h1>
+                    <p class="text-xs text-gray-600">Professional CV Platform</p>
+                </div>
+            </div>
+            <p class="text-white/80">Hosted at: mycv.i.ng/me • Professional • Interactive • Modern</p>
+        </div>
+        
+        <!-- Business Card -->
+        <div class="bg-white rounded-3xl card-shadow hover-lift p-8 mb-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Profile Section -->
+                <div class="md:col-span-1 text-center">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-32 h-32 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full flex items-center justify-center text-white text-4xl font-bold mx-auto">
+                            AJ
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white pulse-animation"></div>
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Adeleke Johnson</h2>
+                    <p class="text-lg font-medium mb-4" style="color: #4A90E2;">Senior UX Designer</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Crafting beautiful digital experiences with 8+ years of expertise in user-centered design and innovation.
+                    </p>
+                    
+                    <!-- QR Code -->
+                    <div class="mt-6">
+                        <div class="w-20 h-20 qr-code mx-auto mb-2"></div>
+                        <p class="text-xs text-gray-500">Scan to save contact</p>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="md:col-span-1 space-y-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-address-book mr-2" style="color: #4A90E2;"></i>
+                        Contact Info
+                    </h3>
+                    
+                    <div class="contact-item p-3 rounded-lg" onclick="makeCall('+2347083682007')">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-green-500 w-5"></i>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-500">Phone</p>
+                                <p class="font-medium text-gray-800">+234 708 368 2007</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item p-3 rounded-lg" onclick="sendEmail('info@mycv.i.ng')">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 w-5"></i>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-500">Email</p>
+                                <p class="font-medium text-gray-800">info@mycv.i.ng</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item p-3 rounded-lg" onclick="openWebsite('https://mycv.i.ng')">
+                        <div class="flex items-center">
+                            <i class="fas fa-globe text-purple-500 w-5"></i>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-500">Website</p>
+                                <p class="font-medium text-gray-800">mycv.i.ng</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item p-3 rounded-lg">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-red-500 w-5"></i>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-500">Location</p>
+                                <p class="font-medium text-gray-800">Fate-Tanke, Ilorin, KW</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Media & Actions -->
+                <div class="md:col-span-1">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-share-alt mr-2" style="color: #4A90E2;"></i>
+                        Connect & Actions
+                    </h3>
+                    
+                    <!-- Social Media Links -->
+                    <div class="grid grid-cols-2 gap-3 mb-6">
+                        <a href="https://linkedin.com/company/lemmaiot" target="_blank" class="social-icon bg-blue-600 text-white p-3 rounded-lg text-center hover:bg-blue-700">
+                            <i class="fab fa-linkedin-in text-xl mb-1"></i>
+                            <p class="text-xs">LinkedIn</p>
+                        </a>
+                        
+                        <a href="https://twitter.com/LemmaIoT" target="_blank" class="social-icon bg-sky-500 text-white p-3 rounded-lg text-center hover:bg-sky-600">
+                            <i class="fab fa-twitter text-xl mb-1"></i>
+                            <p class="text-xs">Twitter</p>
+                        </a>
+                        
+                        <a href="https://instagram.com/lemmaiot/feed" target="_blank" class="social-icon bg-pink-500 text-white p-3 rounded-lg text-center hover:bg-pink-600">
+                            <i class="fab fa-instagram text-xl mb-1"></i>
+                            <p class="text-xs">Instagram</p>
+                        </a>
+                        
+                        <a href="https://facebook.com/Lemmaiot" target="_blank" class="social-icon bg-gray-800 text-white p-3 rounded-lg text-center hover:bg-gray-900">
+                            <i class="fab fa-facebook text-xl mb-1"></i>
+                            <p class="text-xs">Facebook</p>
+                        </a>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="space-y-3">
+                        <button onclick="downloadCV()" class="w-full text-white py-3 px-4 rounded-lg font-medium transition-all flex items-center justify-center" style="background: #4A90E2;" onmouseover="this.style.background='#3A7BC8'" onmouseout="this.style.background='#4A90E2'">
+                            <i class="fas fa-download mr-2"></i>
+                            Download CV
+                        </button>
+                        
+                        <button onclick="saveContact()" class="w-full text-white py-3 px-4 rounded-lg font-medium transition-all flex items-center justify-center" style="background: #FF968D;" onmouseover="this.style.background='#FF7F73'" onmouseout="this.style.background='#FF968D'">
+                            <i class="fas fa-user-plus mr-2"></i>
+                            Save Contact
+                        </button>
+                        
+                        <button onclick="printCard()" class="w-full text-white py-3 px-4 rounded-lg font-medium transition-all flex items-center justify-center" style="background: #4A90E2;" onmouseover="this.style.background='#3A7BC8'" onmouseout="this.style.background='#4A90E2'">
+                            <i class="fas fa-print mr-2"></i>
+                            Print Card
+                        </button>
+                        
+                        <button onclick="shareCard()" class="w-full bg-gray-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-gray-700 transition-all flex items-center justify-center">
+                            <i class="fas fa-share mr-2"></i>
+                            Share Card
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <!-- Professional Information Tabs -->
+        <div class="bg-white rounded-3xl card-shadow hover-lift p-8 mb-8">
+            <!-- Tab Navigation -->
+            <div class="flex border-b border-gray-200 mb-6">
+                <button onclick="switchTab('skills')" id="skills-tab" class="tab-button px-6 py-3 font-medium text-sm border-b-2 transition-all" style="color: #4A90E2; border-color: #4A90E2;">
+                    <i class="fas fa-star mr-2"></i>Skills & Expertise
+                </button>
+                <button onclick="switchTab('experience')" id="experience-tab" class="tab-button px-6 py-3 font-medium text-sm text-gray-500 border-b-2 border-transparent hover:text-gray-700 transition-all">
+                    <i class="fas fa-briefcase mr-2"></i>Work Experience
+                </button>
+                <button onclick="switchTab('education')" id="education-tab" class="tab-button px-6 py-3 font-medium text-sm text-gray-500 border-b-2 border-transparent hover:text-gray-700 transition-all">
+                    <i class="fas fa-graduation-cap mr-2"></i>Education
+                </button>
+            </div>
+            
+            <!-- Skills Tab Content -->
+            <div id="skills-content" class="tab-content">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">UI/UX Design</span>
+                                <span class="text-sm text-gray-500">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="h-2 rounded-full" style="width: 95%; background: #4A90E2;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">Prototyping</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="h-2 rounded-full" style="width: 90%; background: #FF968D;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">User Research</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="h-2 rounded-full" style="width: 85%; background: #4A90E2;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #4A90E2;">Figma</span>
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #FF968D;">Sketch</span>
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #4A90E2;">Adobe XD</span>
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #FF968D;">Principle</span>
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #4A90E2;">InVision</span>
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #FF968D;">Framer</span>
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #4A90E2;">Webflow</span>
+                            <span class="px-3 py-1 rounded-full text-sm text-white" style="background: #FF968D;">HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Experience Tab Content -->
+            <div id="experience-content" class="tab-content hidden">
+                <div class="space-y-6">
+                    <div class="border-l-4 pl-6" style="border-color: #4A90E2;">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold text-gray-800">Senior UX Designer</h4>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">2020 - Present</span>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-2">Design Studio Inc.</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Leading design initiatives for enterprise clients, managing a team of 5 designers, and establishing design systems that improved development efficiency by 40%.</p>
+                    </div>
+                    
+                    <div class="border-l-4 pl-6" style="border-color: #FF968D;">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold text-gray-800">UX Designer</h4>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">2018 - 2020</span>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-2">Tech Innovations Ltd.</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Designed user interfaces for mobile and web applications, conducted user research, and collaborated with cross-functional teams to deliver user-centered solutions.</p>
+                    </div>
+                    
+                    <div class="border-l-4 pl-6" style="border-color: #4A90E2;">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold text-gray-800">Junior Designer</h4>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">2016 - 2018</span>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-2">Creative Startup</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Supported senior designers in creating wireframes, prototypes, and visual designs. Gained experience in user testing and design iteration processes.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education Tab Content -->
+            <div id="education-content" class="tab-content hidden">
+                <div class="space-y-6">
+                    <div class="border-l-4 pl-6" style="border-color: #4A90E2;">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold text-gray-800">Bachelor of Design</h4>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">2012 - 2016</span>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-2">University of California, Berkeley</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Specialized in User Experience Design and Human-Computer Interaction. Graduated Magna Cum Laude with a focus on design thinking and user research methodologies.</p>
+                    </div>
+                    
+                    <div class="border-l-4 pl-6" style="border-color: #FF968D;">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold text-gray-800">UX Design Certification</h4>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">2017</span>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-2">Google UX Design Professional Certificate</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Comprehensive program covering user research, wireframing, prototyping, and usability testing. Completed 6 hands-on projects demonstrating end-to-end design process.</p>
+                    </div>
+                    
+                    <div class="border-l-4 pl-6" style="border-color: #4A90E2;">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold text-gray-800">Advanced Prototyping Workshop</h4>
+                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">2019</span>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-2">IDEO Design Thinking</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Intensive workshop focused on advanced prototyping techniques, design thinking methodologies, and collaborative design processes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Quick Actions Footer -->
+        <div class="bg-white rounded-3xl card-shadow hover-lift p-6 text-center">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Ready to Connect?</h3>
+            <div class="flex flex-wrap justify-center gap-3">
+                <button onclick="sendEmail('info@mycv.i.ng')" class="px-6 py-2 rounded-full text-white font-medium transition-all hover:scale-105" style="background: #4A90E2;">
+                    <i class="fas fa-envelope mr-2"></i>Send Message
+                </button>
+                <button onclick="makeCall('+2347083682007')" class="px-6 py-2 rounded-full text-white font-medium transition-all hover:scale-105" style="background: #FF968D;">
+                    <i class="fas fa-phone mr-2"></i>Schedule Call
+                </button>
+                <button onclick="openWebsite('https://mycv.i.ng')" class="px-6 py-2 rounded-full bg-gray-600 text-white font-medium hover:bg-gray-700 transition-all hover:scale-105">
+                    <i class="fas fa-globe mr-2"></i>View Portfolio
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Print Version (Hidden) -->
+    <div class="print-card">
+        <div style="display: flex; height: 100%;">
+            <div style="flex: 1; padding-right: 0.1in;">
+                <h2 style="font-size: 16px; font-weight: bold; margin: 0 0 4px 0; color: #333;">Alex Johnson</h2>
+                <p style="font-size: 12px; color: #666; margin: 0 0 8px 0;">Senior UX Designer</p>
+                <p style="font-size: 10px; color: #333; margin: 0 0 2px 0;">📞 +234 708 368 2007</p>
+                <p style="font-size: 10px; color: #333; margin: 0 0 2px 0;">✉️ info@mycv.i.ng</p>
+                <p style="font-size: 10px; color: #333; margin: 0 0 2px 0;">🌐 mycv.i.ng</p>
+                <p style="font-size: 10px; color: #333; margin: 0;">📍 Fate-Tanke, Ilorin, KW</p>
+            </div>
+            <div style="width: 0.6in; display: flex; align-items: center; justify-content: center;">
+                <div class="qr-code" style="width: 0.5in; height: 0.5in;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function makeCall(phoneNumber) {
+            window.location.href = `tel:${phoneNumber}`;
+        }
+        
+        function sendEmail(email) {
+            window.location.href = `mailto:${email}?subject=Hello from your Digital Business Card`;
+        }
+        
+        function openWebsite(url) {
+            window.open(url, '_blank');
+        }
+        
+        function downloadCV() {
+            // Create a sample CV download
+            const cvContent = `
+ALEX JOHNSON - SENIOR UX DESIGNER
+
+CONTACT INFORMATION
+Phone: +1 (555) 012-3456
+Email: alex.johnson@designstudio.com
+Website: alexjohnson.design
+Location: San Francisco, CA
+
+PROFESSIONAL SUMMARY
+Senior UX Designer with 8+ years of experience crafting beautiful digital experiences with expertise in user-centered design and innovation.
+
+SKILLS
+• UI/UX Design (95%)
+• Prototyping (90%)
+• User Research (85%)
+• Figma, Sketch, Adobe XD
+• HTML/CSS, JavaScript
+• Design Systems
+
+EXPERIENCE
+Senior UX Designer | Design Studio | 2020 - Present
+UX Designer | Tech Company | 2018 - 2020
+Junior Designer | Startup | 2016 - 2018
+
+EDUCATION
+Bachelor of Design | University of California | 2016
+            `;
+            
+            const blob = new Blob([cvContent], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Alex_Johnson_CV.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            
+            // Show success message
+            showNotification('CV downloaded successfully!', 'success');
+        }
+        
+        function saveContact() {
+            // Create vCard format
+            const vCard = `BEGIN:VCARD
+VERSION:3.0
+FN:Alex Johnson
+ORG:Design Studio
+TITLE:Senior UX Designer
+TEL:+15550123456
+EMAIL:alex.johnson@designstudio.com
+URL:https://alexjohnson.design
+ADR:;;San Francisco;CA;;USA
+END:VCARD`;
+            
+            const blob = new Blob([vCard], { type: 'text/vcard' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Alex_Johnson_Contact.vcf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            
+            showNotification('Contact saved successfully!', 'success');
+        }
+        
+        function printCard() {
+            window.print();
+        }
+        
+        function shareCard() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Alex Johnson - Digital Business Card',
+                    text: 'Check out my digital business card!',
+                    url: window.location.href
+                });
+            } else {
+                // Fallback: copy URL to clipboard
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    showNotification('Card URL copied to clipboard!', 'success');
+                });
+            }
+        }
+        
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 right-4 px-6 py-3 rounded-lg text-white font-medium z-50 ${
+                type === 'success' ? 'bg-green-500' : 'bg-red-500'
+            }`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transform = 'translateY(-20px)';
+                notification.style.transition = 'all 0.3s ease';
+                
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+        
+        function switchTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.add('hidden'));
+            
+            // Remove active styles from all tabs
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.style.color = '#6B7280';
+                button.style.borderColor = 'transparent';
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName + '-content').classList.remove('hidden');
+            
+            // Add active styles to selected tab
+            const activeTab = document.getElementById(tabName + '-tab');
+            activeTab.style.color = '#4A90E2';
+            activeTab.style.borderColor = '#4A90E2';
+        }
+        
+        // Add some interactive animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate skill bars on scroll
+            const skillBars = document.querySelectorAll('[style*="background: #4A90E2"], [style*="background: #FF968D"]');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fillBar 1.5s ease-out forwards';
+                    }
+                });
+            });
+            
+            skillBars.forEach(bar => observer.observe(bar));
+            
+
+        });
+        
+
+        
+        // Add CSS animation for skill bars
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fillBar {
+                from { width: 0%; }
+                to { width: var(--target-width, 100%); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96f3d36494fa1b23',t:'MTc1NTIwOTg4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

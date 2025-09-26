@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - MyCV.i.ng | Wrong Address</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#4a90e2',
+                        'dark-gray': '#2d2d2d',
+                        'nigerian-green': '#008751'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .gradient-bg { background: linear-gradient(135deg, #4a90e2 0%, #008751 100%); }
+        
+        .floating { animation: float 3s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .bounce { animation: bounce 2s infinite; }
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% { transform: translateY(0); }
+            40%, 43% { transform: translateY(-15px); }
+            70% { transform: translateY(-7px); }
+            90% { transform: translateY(-3px); }
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes pulse-glow {
+            from { box-shadow: 0 0 20px rgba(74, 144, 226, 0.3); }
+            to { box-shadow: 0 0 30px rgba(74, 144, 226, 0.6); }
+        }
+        
+        .shake {
+            animation: shake 0.5s ease-in-out;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer">
+                    <div class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">CV</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900">MyCV.i.ng</span>
+                </a>
+                <div class="flex items-center space-x-6">
+                    <a href="/" class="text-gray-600 hover:text-primary-blue transition-colors">Home</a>
+                    <a href="/terms" class="text-gray-600 hover:text-primary-blue transition-colors">Terms</a>
+                    <span class="text-sm text-gray-600">🇳🇬 Made for Nigerians</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Error Content -->
+    <main class="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+            
+            <!-- 404 Animation -->
+            <div class="mb-12">
+                <div class="relative">
+                    <!-- Large 404 -->
+                    <div class="text-8xl md:text-9xl font-bold text-gray-200 floating select-none">
+                        404
+                    </div>
+                    
+                    <!-- Floating Icon -->
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary-blue to-nigerian-green rounded-full flex items-center justify-center bounce pulse-glow">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Error Message -->
+            <div class="mb-8">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Oops! Wrong Address
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-600 mb-6">
+                    The page you're looking for doesn't exist at this address.
+                </p>
+                
+                <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-xl max-w-lg mx-auto mb-8">
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 text-red-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                        </svg>
+                        <div class="ml-3">
+                            <h3 class="text-lg font-bold text-red-800 mb-2">Common Reasons:</h3>
+                            <ul class="text-red-700 text-sm space-y-1">
+                                <li>• You typed the wrong URL</li>
+                                <li>• The CV website name doesn't exist</li>
+                                <li>• The link you clicked is broken</li>
+                                <li>• The page has been moved or deleted</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="space-y-4 mb-12">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="window.location.href='/'" class="bg-gradient-to-r from-primary-blue to-nigerian-green text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        🏠 Go to Homepage
+                    </button>
+                    
+                    <button onclick="window.history.back()" class="bg-white text-gray-700 border-2 border-gray-300 px-8 py-4 rounded-xl font-semibold text-lg hover:border-primary-blue hover:text-primary-blue transition-all duration-300">
+                        ← Go Back
+                    </button>
+                </div>
+                
+                <p class="text-gray-500 text-sm">or try one of the options below</p>
+            </div>
+
+            <!-- Helpful Options -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12 max-w-lg mx-auto">
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-nigerian-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Create Your CV</h3>
+                    <p class="text-gray-600 text-sm mb-4">Turn your CV into a website in 24 hours</p>
+                    <button onclick="window.location.href='/#order'" class="w-full bg-nigerian-green text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                        Get Started - ₦2,500
+                    </button>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Need Help?</h3>
+                    <p class="text-gray-600 text-sm mb-4">Contact us if you can't find what you're looking for</p>
+                    <button onclick="window.open('https://wa.me/2348012345678?text=Hi! I got a 404 error and need help finding a CV website.', '_blank')" class="w-full bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                        WhatsApp Us
+                    </button>
+                </div>
+            </div>
+
+            <!-- URL Format Help -->
+            <div class="bg-blue-50 border-l-4 border-primary-blue p-6 rounded-r-xl max-w-2xl mx-auto">
+                <h4 class="font-bold text-blue-800 mb-3 flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                    </svg>
+                    Correct URL Format
+                </h4>
+                <p class="text-blue-700 mb-3">CV websites on MyCV.i.ng follow this format:</p>
+                <div class="bg-blue-100 p-3 rounded font-mono text-blue-800 text-center">
+                    www.mycv.i.ng/<span class="font-bold text-blue-600">yourname</span>
+                </div>
+                <p class="text-blue-600 text-sm mt-3">
+                    <strong>Example:</strong> www.mycv.i.ng/john-doe or www.mycv.i.ng/adebayo
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <a href="/" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition-opacity cursor-pointer"></a>
+                        <div class="w-8 h-8 bg-primary-blue rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-xs">CV</span>
+                        </div>
+                        <span class="text-lg font-bold">MyCV.i.ng</span>
+                    </a>
+                    <p class="text-gray-400">Turn your CV into a website in 24 hours. Made for Nigerians.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/terms" class="hover:text-white transition-colors">Terms & Conditions</a></li>
+                        <li><a href="/refund" class="hover:text-white transition-colors">Refund Policy</a></li>
+                        <li><a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact Support</h4>
+                    <div class="space-y-2">
+                        <button onclick="window.open('https://wa.me/2348012345678', '_blank')" class="flex items-center text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                            </svg>
+                            WhatsApp Support
+                        </button>
+                        <button onclick="window.location.href='mailto:support@mycv.i.ng'" class="flex items-center text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            Email Support
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 MyCV.i.ng. Made with ❤️ in Nigeria by <a href="https://lemmaiot.com.ng" target="_blank" class="text-primary-blue hover:underline">LemmaIoT Cloud Solution</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add some interactive feedback
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to cards
+            const cards = document.querySelectorAll('.bg-white.p-6');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Add click feedback to buttons
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+        });
+
+        // Add some fun easter egg
+        let clickCount = 0;
+        document.querySelector('.floating').addEventListener('click', function() {
+            clickCount++;
+            if (clickCount === 5) {
+                alert('🎉 You found the easter egg! You clicked the 404 five times! 🎉');
+                clickCount = 0;
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'970d227f46b11640',t:'MTc1NTQ3NTI2Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
